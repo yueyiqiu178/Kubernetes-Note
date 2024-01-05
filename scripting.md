@@ -22,3 +22,4 @@
 ### systemctl stop docker
 ### systemctl status docker.service
 ### dockerd --debug
+### systemctl daemon-reload
