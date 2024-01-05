@@ -23,3 +23,5 @@
 ### systemctl status docker.service
 ### dockerd --debug
 ### systemctl daemon-reload
+### kubeadm config images pull --kubernetes-version=v1.28.2
+### vim /etc/docker/daemon.json
