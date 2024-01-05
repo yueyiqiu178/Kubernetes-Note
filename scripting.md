@@ -10,13 +10,15 @@
 ### dnf install docker-ce
 ### systemctl enable docker
 ### systemctl start docker
-### vim kubernetes.repo
+### vim /etc/yum.repos.d/kubernetes.repo
 ### dnf install kubeadm -y 
 ### systemctl enable kubelet
 ### systemctl start kubelet
 ### swapoff -a
 ### kubeadm init
 ### kubeadm config images pull
+### vi /etc/containerd/config.toml
+### systemctl restart containerd
 ### systemctl restart docker
 ### systemctl start docker
 ### systemctl stop docker
@@ -25,3 +27,5 @@
 ### systemctl daemon-reload
 ### kubeadm config images pull --kubernetes-version=v1.28.2
 ### vim /etc/docker/daemon.json
+### vim /etc/selinux/config
+### docker info | grep -i cgroup
