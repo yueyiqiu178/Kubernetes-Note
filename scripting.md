@@ -17,5 +17,8 @@
 ### swapoff -a
 ### kubeadm init
 ### kubeadm config images pull
-
-
+### systemctl restart docker
+### systemctl start docker
+### systemctl stop docker
+### systemctl status docker.service
+### dockerd --debug
