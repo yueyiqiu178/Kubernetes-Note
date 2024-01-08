@@ -29,6 +29,7 @@
 ### vim /etc/docker/daemon.json
 ### vim /etc/selinux/config
 ### docker info | grep -i cgroup
+### vim /etc/sysctl.d/k8s.conf
 ### export OS=CentOS_8
 ### export VERSION=1.23
 ### curl -L -o /etc/yum.repos.d/devel:kubic:libcontainers:stable.repo https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/$OS/devel:kubic:libcontainers:stable.repo
@@ -41,3 +42,37 @@
 ### systemctl status crio
 ### kubeadm config images pull
 ### crictl images
+### hostnamectl set-hostname master01.tayeh.me
+### dnf install firewalld
+### systemctl enable firewalld
+### systemctl start firewalld
+### firewall-cmd --state
+### firewall-cmd --get-default-zone
+### firewall-cmd --get-active-zones
+### firewall-cmd --list-all
+### firewall-cmd --add-port={6443,2379-2380,10250,10251,10252,5473,179,5473}/tcp --permanent
+### firewall-cmd --add-port={6443,2379-2380,10250,10251,10252,5473,179,5473}/tcp --permanent
+### firewall-cmd --add-port={4789,8285,8472}/udp --permanent
+### firewall-cmd --reload
+### kubeadm init
+### cd /etc/kubernetes/manifests
+### rm -rf kubernetes
+### systemctl status kubelet
+### systemctl restart kubelet
+### systemctl status kubelet
+### curl http://localhost:10248/healthz
+### systemctl status kubelet
+### journalctl -f -u kubelet
+### swapoff -a
+### firewall-cmd --add-port={10250,30000-32767,5473,179,5473}/tcp --permanent
+### firewall-cmd --add-port={4789,8285,8472}/udp --permanent
+### firewall-cmd --reload
+### docker info|grep Driver
+### systemctl show --property=Environment kubelet |cat
+### dnf install docker-ce --allowerasing
+### dockerd --debug
+### systemctl status docker.service
+### journalctl -u docker.service
+### systemctl stop firewalld
+### systemctl show --property=Environment kubelet |cat
+
