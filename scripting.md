@@ -41,7 +41,6 @@
 ### systemctl enable --now crio
 ### systemctl status crio
 ### kubeadm config images pull
-### crictl images
 ### hostnamectl set-hostname master01.tayeh.me
 ### dnf install firewalld
 ### systemctl enable firewalld
@@ -75,4 +74,7 @@
 ### journalctl -u docker.service
 ### systemctl stop firewalld
 ### systemctl show --property=Environment kubelet |cat
+### crictl images
+### crictl config runtime-endpoint unix:///var/run/containerd/containerd.sock
+### crictl config image-endpoint unix:///var/run/containerd/containerd.sock
 
