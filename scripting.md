@@ -29,3 +29,15 @@
 ### vim /etc/docker/daemon.json
 ### vim /etc/selinux/config
 ### docker info | grep -i cgroup
+### export OS=CentOS_8
+### export VERSION=1.23
+### curl -L -o /etc/yum.repos.d/devel:kubic:libcontainers:stable.repo https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/$OS/devel:kubic:libcontainers:stable.repo
+### curl -L -o /etc/yum.repos.d/devel:kubic:libcontainers:stable:cri-o:$VERSION.repo https://download.opensuse.org/repositories/devel:kubic:libcontainers:stable:cri-o:$VERSION/$OS/devel:kubic:libcontainers:stable:cri-o:$VERSION.repo
+### dnf remove docker-ce
+### dnf remove containerd.io
+### dnf install cri-o
+### systemctl daemon-reload
+### systemctl enable --now crio
+### systemctl status crio
+### kubeadm config images pull
+### crictl images
