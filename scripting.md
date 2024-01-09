@@ -80,3 +80,25 @@
 ### dnf install kubeadm-1.25.0-0
 ### dnf downgrade kubelet 1.25.0-0
 ### dnf --showduplicates list kubeadm
+## ubuntu安裝kubernetes
+### apt update
+### apt search vim
+### apt install vim
+### apt install systemctl
+### sysctl --system
+### apt install -y docker.io
+### vi /etc/hosts
+### apt-get install -y apt-transport-https ca-certificates curl
+### cat /etc/issue #查看ubuntu版本
+### systemctl enable docker
+### apt install gnupg
+### curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add
+### apt install software-properties-common
+### type apt-add-repository
+### apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+### apt install -y kubelet kubeadm kubectl
+### kubeadm version
+### swapoff -a
+### vim /etc/hosts
+### hostnamectl set-hostname k8master
+### kubeadm init --pod-network-cidr=10.244.0.0/16
