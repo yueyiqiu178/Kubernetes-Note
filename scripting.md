@@ -17,7 +17,7 @@
 ### swapoff -a
 ### kubeadm init
 ### kubeadm config images pull
-### vi /etc/containerd/config.toml
+### vim /etc/containerd/config.toml
 ### systemctl restart containerd
 ### systemctl restart docker
 ### systemctl start docker
@@ -77,4 +77,6 @@
 ### crictl images
 ### crictl config runtime-endpoint unix:///var/run/containerd/containerd.sock
 ### crictl config image-endpoint unix:///var/run/containerd/containerd.sock
-
+### dnf install kubeadm-1.25.0-0
+### dnf downgrade kubelet 1.25.0-0
+### dnf --showduplicates list kubeadm
